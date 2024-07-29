@@ -1,0 +1,110 @@
+python install 
+	python3 --version
+vscode install
+	extensions 
+		python
+			linting, itellsense etc
+virtual enviroments
+	isolation of installs of package etc
+		py -3 -m venv venv in terminal
+			view > select interpreter, find venv 
+			venv\Scripts\activate.bat
+fastAPI
+	pip install fastapi[all]
+	start web server 
+		uvicorn main: app -- reload (runs this to restart server on save) only on development enviroment
+	Path operation/routes
+		https methods
+			Get
+			Post
+				Body(...) from fastapi.params to parse json to dict
+			Delete
+			Put
+		decorator @ / extends functions 
+		functions
+		Path parameters
+CRUD
+Schemas
+	pydantic to define Schemas for validation input and output of data 
+	from typing import Optional
+		this library helps us give Optional json fields will set value to null
+status codes for https request
+	status
+Response 
+Https Exceptions
+python 
+	when create a new foler in python declare __init__.py file
+Databases
+	DBMS
+		NOsql
+			MongoDB
+		Relational
+			PostgreSQL
+				how to connect to postgresSQL db 
+			MYSQL
+	setting up database file for sesion sql alchemy etc to query
+		SQLALCHEMY_DATABASE_URL = "postgresql://postgres:Cdefgab!1@localhost/fastapi" # CHANGE URL 
+SQL 
+APIRouter to help clean up folder structure and define routing of http request
+	tagging for easy doc understanding
+	cleaning up code
+Pydantic 
+	schemas 
+		In and out validation of data from the user 
+ORM 
+	Sqlalchemy
+		Models
+			create tables in postgres/ pgadmin tool will show this
+			understand data types for allowed database
+Password hashing 
+	bcrpyt library and passLib 
+		one way 
+			hash to hash check to verify pw
+Postman 
+	enviroment
+	https request 
+	dynamic setup for token/login
+JWT Tokens
+	verification of Token
+		3 pieces of token
+			header 
+			payload
+			 id etc
+			verify signature
+				header + payload + secret 
+					api secret
+				pass to alg 
+					returns signature
+SQL
+	FK 
+	relationship
+	Copomsite keys
+	group by etc to get count of votes for each post
+	joins 
+Query parameters
+	multiple queries 
+		defaults values
+	search / contains
+enviroment variables
+	system variables
+	enviroment files 
+		.env 
+			add to git ignore for safety
+		utilise pydantic schemas as config file to validate data types
+			.env > config(schemas valdation) > use case file(where it need the enviroment variables)
+data migration tool 
+	Alembic 
+		revisionining
+		alembic init alembic -- set up folder structure
+		changes needed to connect to models and db
+		replaces creation create all command from orm, alembic will do this now
+		alembic table - stores revision number
+		alembic upgrade {revision number}
+		upgrade and downgrade for data changes in revision file 
+		alembic heads - gets the latest revision 
+		alembic upgrade head -- updates database to latest revision run all in betwen revisions
+		alembic downgrade ( -1 etc will downgrade to prevision revision or preferably pass it down revision number)
+		sa.PrimaryKeyConstraint('id') - this can be used to also set PK
+		auto generate feature with alembic checks model ands see whats missing it will add it in for you  
+CORS (cross origin resource sharing)
+	middleware - fucntion that run before requests
