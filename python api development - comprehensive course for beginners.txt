@@ -119,3 +119,10 @@ Heroku
 	git remote - it will create a remote to heroku 
 	git push heroku main will push the instance to there 
 	create file to tell hroku to start app
+	CONCLUSION HEROKU SUCKS ASS, kept asking for more money 
+Digital ocean 
+	setting up linux server
+	Create account 
+	create Droplet 
+		select OS 
+	

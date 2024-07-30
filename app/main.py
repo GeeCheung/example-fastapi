@@ -7,7 +7,7 @@ from .config import settings
 from .database import engine
 from .routers import auth, post, user, vote
 
-#models.Base.metadata.create_all(bind=engine) no longer need cos of alembic 
+#models.Base.metadata.create_all(bind=engine) 
 
 app = FastAPI()
 
