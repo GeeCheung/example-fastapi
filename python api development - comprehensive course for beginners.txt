@@ -108,3 +108,14 @@ data migration tool
 		auto generate feature with alembic checks model ands see whats missing it will add it in for you  
 CORS (cross origin resource sharing)
 	middleware - fucntion that run before requests
+GIT 
+	Install git 
+	in GITHUB create new repo
+	git init
+Heroku 
+	Install 
+	heroku login in terminal 
+	heroku create to create an app with argument name set region eu
+	git remote - it will create a remote to heroku 
+	git push heroku main will push the instance to there 
+	create file to tell hroku to start app
