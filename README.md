@@ -18,9 +18,9 @@ Follow these steps to set up the virtual environment and install the required de
 First, clone the repository to your local machine:
 
 ```sh
-git clone https://github.com/yourusername/projectname.git
+git clone https://github.com/GeeCheung/FAST_API.git
 
-cd projectname
+cd FAST_API
 python3 -m venv venv
 pip install -r requirements.txt
 ```
