@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field
 from pydantic.types import conint
 
 
@@ -63,4 +63,7 @@ class TokenData(BaseModel):
 
 class vote (BaseModel):
     post_id: int
-    dir: conint(le=1) # type: ignore
+    dir: int = Field(..., le=1)
+
+    class Config:
+        from_attributes = True  # Update orm_mode to from_attributes
