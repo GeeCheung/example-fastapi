@@ -29,7 +29,7 @@ def vote(vote: schemas.vote, db: Session = Depends(database.get_db), current_use
         db.add(new_vote)
         db.commit()
 
-        return {"message": "successfully added vote"}
+        return {"message": "successfully added vote, nice!"}
     else:
         if not found_vote:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="vote does not exist")

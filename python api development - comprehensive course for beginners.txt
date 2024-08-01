@@ -125,4 +125,5 @@ Digital ocean
 	Create account 
 	create Droplet 
 		select OS 
-	
+Docker
+Railway

@@ -12,6 +12,8 @@ services:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
       - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
 
   pgadmin:
     container_name: pgadmin
@@ -29,9 +31,12 @@ services:
     build: .
     command: bash -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
     volumes:
-      - .:/app
+      - ./:/usr/src/app:ro
     ports:
       - 8000:8000
     depends_on:
       - db
     restart: always
+
+volumes:
+  postgres_data:
