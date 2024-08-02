@@ -126,4 +126,14 @@ Digital ocean
 	create Droplet 
 		select OS 
 Docker
+	dockerfile
+	 creates images
+	  takes local project directory and saves it on a image loading the requirements.txt pkgs and starting server not really
+	  needed cos of docker compose overides
+	dockercompose 
+		created containers from the image
+	dockerdesktop
+		gui to help with containers and images etc 
 Railway
+Testing
+	pytest
